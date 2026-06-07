@@ -1,19 +1,16 @@
 package edu.icet.ecom.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+
 @Getter
-@AllArgsConstructor
-@Entity
-@Table(name="Cars")
-
+@ToString
+@Setter
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String brand;
     private String model;

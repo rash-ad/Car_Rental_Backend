@@ -1,6 +1,6 @@
 package edu.icet.ecom.controller;
 
-import edu.icet.ecom.dto.CarResponse;
+import edu.icet.ecom.model.Car;
 import edu.icet.ecom.service.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,8 @@ public class CarController {
         @Autowired
         private CarService carService;
 
-        @GetMapping
-        public List<CarResponse> getAllCars() {
+        @GetMapping("/AllCars")
+        public List<Car> getAllCars() {
             return carService.getAllCars();
         }
 
