@@ -8,13 +8,13 @@ import lombok.Getter;
 @AllArgsConstructor
 @Data
 public class CarResponse {
-    private int id;
+    private Integer id;
     private String brand;
     private String model;
     private String color;
-    private double price;
-    private int year;
+    private Double price;
+    private Integer year;
     private String fuelType;
     private String transmission;
-    private boolean available;
+    private Boolean available;
 }

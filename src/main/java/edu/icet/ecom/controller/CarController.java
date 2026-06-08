@@ -4,9 +4,7 @@ import edu.icet.ecom.model.Car;
 import edu.icet.ecom.service.CarService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,6 +18,10 @@ public class CarController {
         @GetMapping("/AllCars")
         public List<Car> getAllCars() {
             return carService.getAllCars();
+        }
+        @PostMapping
+        void addCar(@RequestBody Car car){
+             carService.addCar(car);
         }
 
     }

@@ -15,4 +15,6 @@ public interface CarService  {
 
     List<Car>  getAllCars();
 
+
+    void addCar(Car car);
 }
