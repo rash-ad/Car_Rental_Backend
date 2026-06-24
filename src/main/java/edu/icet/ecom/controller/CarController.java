@@ -1,9 +1,10 @@
 package edu.icet.ecom.controller;
 
+import edu.icet.ecom.dto.CarResponse;
 import edu.icet.ecom.model.Car;
 import edu.icet.ecom.service.CarService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,17 +13,17 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/api/cars")
 public class CarController {
-        @Autowired
-        private CarService carService;
+
+        private final CarService carService;
 
         @GetMapping("/AllCars")
         public List<Car> getAllCars() {
             return carService.getAllCars();
         }
-        @PostMapping
-        void addCar(@RequestBody Car car){
-             carService.addCar(car);
-        }
+    @PostMapping("/createCar")
+    public Car addCar(@RequestBody Car car) {
+        return carService.addCar(car);
+    }
 
     }
 

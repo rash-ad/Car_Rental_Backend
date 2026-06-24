@@ -1,13 +1,15 @@
 package edu.icet.ecom.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
+import jakarta.persistence.Id;
+import lombok.*;
 
 @Getter
 @AllArgsConstructor
 @Data
+@Setter
+@ToString
 public class CarResponse {
+    @Id
     private Integer id;
     private String brand;
     private String model;

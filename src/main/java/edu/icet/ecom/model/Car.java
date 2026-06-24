@@ -1,5 +1,6 @@
 package edu.icet.ecom.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import lombok.ToString;
 @Getter
 @ToString
 @Setter
+@Entity
 public class Car {
     @Id
     private int id;
