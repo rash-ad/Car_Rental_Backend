@@ -1,6 +1,5 @@
 package edu.icet.ecom.dto;
 
-import jakarta.persistence.Id;
 import lombok.*;
 
 @Getter
@@ -9,7 +8,6 @@ import lombok.*;
 @Setter
 @ToString
 public class CarResponse {
-    @Id
     private Integer id;
     private String brand;
     private String model;
